@@ -69,6 +69,27 @@ window.addEventListener("wheel", function (e) {
   }
 });
 
+
+let touchStartY = 0;
+
+window.addEventListener("touchstart", function (e) {
+  touchStartY = e.changedTouches[0].clientY;
+});
+
+window.addEventListener("touchend", function (e) {
+  const touchEndY = e.changedTouches[0].clientY;
+  const deltaY = touchStartY - touchEndY;
+
+  if (Math.abs(deltaY) > 50 && !isAnimating) {
+    if (deltaY > 0 && currentScene < totalScenes - 1) {
+      showScene(currentScene + 1);
+    } else if (deltaY < 0 && currentScene > 0) {
+      showScene(currentScene - 1);
+    }
+  }
+});
+
+
 const canvas = document.getElementById("dustCanvas");
 const ctx = canvas.getContext("2d");
 let particles = [];
