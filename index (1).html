@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Магічна сторінка</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+  <div class="background-overlay"></div>
+  <canvas id="dustCanvas"></canvas>
+  <div class="vignette"></div>
+
+  <div class="header">
+    <img src="https://i.postimg.cc/6pvTHGdd/205e4c6e-e994-4779-99ba-efd71692c962-removebg-preview.png" alt="Логотип" />
+  </div>
+
+  <div class="menu">
+    <nav>
+      <ul class="menu-list">
+        <li class="menu-item active">Головна</li>
+        <li class="menu-item">Про проєкт</li>
+        <li class="menu-item">Контакти</li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="scene" id="scene0">
+    <div class="text-block" id="text0">
+      <h2>Розділ перший</h2>
+      <p>Це вступна частина історії. Текст буде адаптований під настрій сцени та візуальний образ.</p>
+    </div>
+    <div class="image-block"><img id="img0" src="https://i.postimg.cc/nzbjHWrC/9748d31e-8b93-4c88-874a-0f662939261e-removebg-preview.png" /></div>
+    <div class="hint-block" id="hint0">
+      <h3>Підказка</h3>
+      <p>Поглянь уважніше, це тільки початок.</p>
+    </div>
+  </div>
+
+  <div class="scene" id="scene1">
+    <div class="text-block" id="text1" style="opacity: 0;">
+      <h2>Таємниця розкривається</h2>
+      <p>З кожною сценою гравець дізнається більше. Інформація нашаровується і поглиблює сюжет.</p>
+    </div>
+    <div class="image-block"><img id="img1" src="https://i.postimg.cc/KYg3hbZ6/f04ee370-1308-42b4-a96f-87124a74637c-removebg-preview.png" class="hidden" /></div>
+    <div class="hint-block" id="hint1" style="opacity: 0;">
+      <h3>Підказка</h3>
+      <p>Це важливо. Але чи готовий ти дізнатися правду?</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
